@@ -1,0 +1,4 @@
+this is simple test file.
+echo test
+name test
+there u goooooo
