@@ -29,4 +29,6 @@
 
 # [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
 
-grep -P '[^\S]+'  names.txt
+
+# to chek password
+grep -P '(?=.*[a-z])' names.txt | grep -P '(?=.*[A-Z])' | grep -P '(?=.*[0-9])' | grep -P '(?=.[!@#\$%\^&])' | grep -P '(?=.{8,})' > 
