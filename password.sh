@@ -25,7 +25,7 @@ then
                 echo  "LOWER" ;;
             [A-Z] ) 
                 (( UPPER++ ))
-                echo "upper" ;;
+                echo "upper $UPPER" ;;
             [0-9] )
                 (( NUMBER++ ))
                 echo "number" ;;
@@ -43,7 +43,7 @@ else
     echo "not pass"
 fi
 
-if [ $SPECIAL -gt "0" ] && [ "$UPPER" -gt "0" ]; then
+if (( "$SPECIAL" > 0 ))  && (( "$UPPER" > "0" )); then
     if [ $LOWER -gt "0" ] && [ $NUMBER -gt "0" ]; then
         if [ $ALLOW -eq "0" ]; then
             echo "hello"
@@ -54,7 +54,8 @@ if [ $SPECIAL -gt "0" ] && [ "$UPPER" -gt "0" ]; then
             echo "wrong lower and number"
     fi
 else
-    echo "fello"
+    echo "fello $SPECIAL $NUMBER $UPPER $LOWER "
 fi
 
 # while [ ""  ] KaRiR12!& kabir12!&     Kh78$skjfd
+#set up local lang command is LANG=C
